@@ -15,8 +15,7 @@ Someone has used the contact form on your website.<br>
 Here is the data we received:<br>
 Name: <?php echo $name ?><br>
 Email: <?php echo $email ?><br>
-URL: <?php echo $url ?><br>
 Subject: <?php echo $subject ?><br>
-Message: <?php echo $message ?>
+Message: <?php echo nl2br($message) ?>
 <br><br>
 Thank you

@@ -4,7 +4,7 @@
 	global $CONFIG;
 	$CONFIG = array(
 		/* Mail Options */
-		'mail_send_to' =>'maimairel@yahoo.com', 
+		'mail_send_to' =>'igor.kulomzin@gmail.com', 
 		'mail_contents'=>'mail-content.php', 
 
 		/* Messages */
