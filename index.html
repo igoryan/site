@@ -40,11 +40,6 @@ CS-Cart development, WordPress development, Drupal development, Server optimizat
     <link rel="stylesheet" type="text/css" href="css/jasny-bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
 
-    <!-- Slider
-    ================================================== -->
-    <link href="css/owl.carousel.css" rel="stylesheet" media="screen">
-    <link href="css/owl.theme.css" rel="stylesheet" media="screen">
-
     <!-- Stylesheet
     ================================================== -->
     <link rel="stylesheet" type="text/css"  href="css/style.css">
@@ -281,21 +276,36 @@ CS-Cart development, WordPress development, Drupal development, Server optimizat
                 </div>
 
                 <div class="col-md-9">
-                    <form autocomplete="off">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Your Name">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Email">
-                            </div>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Subject">
-                        <textarea class="form-control" rows="4" placeholder="Message"></textarea>
-                        <div class="text-right">
-                            <a href="#" class="btn send-btn">Send</a>
-                        </div>
-                    </form>
+                  <form method="post" class="form-horizontal contact-form" action="php/contact/contact.php">
+
+                    <!-- Honeypot SPAM Protection -->
+                    <input type="text" name="cf[honeypot]" style="display: none">
+                    <!-- END Honeypot SPAM Protection -->
+
+                    <div class="form-group">
+                      <div class="col-md-6">
+                        <input type="text" name="cf[name]" class="form-control required" placeholder="Name">
+                      </div>
+                      <div class="col-md-6">
+                        <input type="email" name="cf[email]" class="form-control required email" placeholder="Email">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <input type="text" name="cf[subject]" class="form-control required" placeholder="Subject">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <textarea name="cf[message]" rows="6" class="form-control required" placeholder="Message"></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-12 text-right">
+                        <a href="#" class="btn send-btn">Submit</a>
+                      </div>
+                    </div>
+                  </form>
                 </div>
             </div>
         </div>
@@ -320,9 +330,9 @@ CS-Cart development, WordPress development, Drupal development, Server optimizat
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/SmoothScroll.js"></script>
     <script type="text/javascript" src="js/jasny-bootstrap.min.js"></script>
-
-    <script src="js/owl.carousel.js"></script>
     <script src="js/typed.js"></script>
+    <script src="js/jquery.form.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script>
       $(function(){
           $("#head-title").typed({
@@ -336,7 +346,7 @@ CS-Cart development, WordPress development, Drupal development, Server optimizat
 
     <!-- Javascripts
     ================================================== -->
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/main1.js"></script>
 
   </body>
 </html>
